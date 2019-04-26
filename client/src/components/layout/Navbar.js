@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import { clearCurrentProfile } from "../../actions/profileActions";
+import logo from "../../img/p5logo.png";
 
 class Navbar extends Component {
   onLogoutClick(e) {
@@ -16,6 +17,17 @@ class Navbar extends Component {
     const { isAuthenticated, user } = this.props.auth;
     const authLinks = (
       <ul className="navbar-nav ml-auto">
+        <li className="nav-item">
+          <a className="nav-link" href="/game.html" target="gameServer">
+            Start Game
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="/routing.html">
+            Active Controller
+          </a>
+        </li>
+
         <li className="nav-item">
           <Link className="nav-link" to="/dashboard">
             Dashboard
@@ -59,6 +71,7 @@ class Navbar extends Component {
       <div>
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
           <div className="container">
+            <img className="logoPic" src={logo} />
             <Link className="navbar-brand" to="/">
               MERN FURY
             </Link>
