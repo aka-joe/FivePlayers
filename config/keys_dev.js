@@ -1,4 +1,4 @@
 module.exports = {
-  mongoURI: "mongodb://localhost/scraper_news",
+  mongoURI: "mongodb://localhost/gms_db",
   secretOrKey: "secret"
 };
